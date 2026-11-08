@@ -1,0 +1,63 @@
+{
+  "sample_rate": 16000,
+  "channels": 1,
+  "pcm_dtype": "int16",
+  "maximum_samples": 480000,
+  "frame_length_ms": 25,
+  "frame_shift_ms": 10,
+  "dither": 0,
+  "preemphasis": 0.97,
+  "remove_dc_offset": true,
+  "fft_size": 512,
+  "mel_bins": 80,
+  "low_frequency_hz": 20,
+  "energy_appended": false,
+  "log_power_fbank": true,
+  "sensevoice": {
+    "sample_scale": 1.0,
+    "window": "hamming",
+    "snip_edges": true,
+    "high_frequency_hz": 8000,
+    "lfr_window": 7,
+    "lfr_shift": 6,
+    "language": 0,
+    "text_norm": 14,
+    "cmvn": "(x + neg_mean) * inv_stddev; metadata values",
+    "discard_prefix_frames": 4,
+    "hidden_dimensions": 512
+  },
+  "zipa": {
+    "sample_scale": 3.0517578125e-05,
+    "pad_left_samples": 1440,
+    "pad_right_samples": 1920,
+    "window": "povey",
+    "snip_edges": false,
+    "high_frequency_hz": 7600,
+    "classes": 127
+  },
+  "reader": {
+    "dimensions": 722,
+    "frames_per_lfr": 3,
+    "round_features_to": "float16 then float32",
+    "output_classes": 28,
+    "phone_scale": 8.0,
+    "phone_scale_already_inside_model": true
+  },
+  "default_decoder": {
+    "ctc_beam_width": 48,
+    "top_nonblank_per_frame": 8,
+    "logit_cutoff": 11.0,
+    "language_weight": 1.0,
+    "length_reward": 2.0
+  },
+  "optional_app_dictionary": {
+    "lexical_beam_width": 64,
+    "unknown_word_potential": -6.0,
+    "unknown_penalty": 2.0,
+    "context_weight": 0.25,
+    "word_reward": 11.0,
+    "maximum_acoustic_drop": 8.0,
+    "accent_context_margin": 0.0
+  },
+  "silence": "Return no speech before decoding; arbitrary model output on zero features is not speech."
+}

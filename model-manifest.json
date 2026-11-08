@@ -1,0 +1,215 @@
+{
+  "release": "v1.0.0",
+  "model_revision": "v23-acoustic-pair",
+  "format": "ONNX",
+  "date": "2026-11-08",
+  "publisher": "Takahiro Yonemura (arumenoy)",
+  "scope": "Model weights, vocabulary, configuration, optional dictionary data, and documentation only.",
+  "audio": {
+    "sample_rate": 16000,
+    "channels": 1,
+    "sample_format": "signed int16",
+    "maximum_seconds": 30
+  },
+  "models": {
+    "sensevoice-prefix.onnx": {
+      "bytes": 54913205,
+      "sha256": "8e29f4271749e6a679230a122ca34ce9fd6d75bd217a69b4e4ad371d43fafecd",
+      "license": "FunASR Model Open Source License Agreement 1.1",
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            "T",
+            560
+          ]
+        },
+        {
+          "name": "x_length",
+          "dtype": "INT32",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "language",
+          "dtype": "INT32",
+          "shape": [
+            "N"
+          ]
+        },
+        {
+          "name": "text_norm",
+          "dtype": "INT32",
+          "shape": [
+            "N"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "/encoder/encoders.15/Add_1_output_0",
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            "",
+            512
+          ]
+        }
+      ],
+      "opsets": {
+        "ai.onnx": 13
+      }
+    },
+    "zipa.onnx": {
+      "bytes": 309932532,
+      "sha256": "b1e0dd76507e8f851ad13f43f77d1f745f876b6e33c1527f2e2fed9de1f20704",
+      "license": "CC-BY-4.0",
+      "inputs": [
+        {
+          "name": "x",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            "T",
+            80
+          ]
+        },
+        {
+          "name": "x_lens",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "log_probs",
+          "dtype": "FLOAT",
+          "shape": [
+            "N",
+            "T",
+            127
+          ]
+        },
+        {
+          "name": "log_probs_len",
+          "dtype": "INT64",
+          "shape": [
+            "N"
+          ]
+        }
+      ],
+      "opsets": {
+        "ai.onnx": 13
+      }
+    },
+    "reader.onnx": {
+      "bytes": 5175032,
+      "sha256": "49e2649d2de53d07efe41a265f141cf34ed0de55b783ab92ca7c12186b0b5237",
+      "license": "CC-BY-4.0",
+      "inputs": [
+        {
+          "name": "frames",
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            "frames",
+            722
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            "frames",
+            28
+          ]
+        }
+      ],
+      "opsets": {
+        "ai.onnx": 17
+      }
+    },
+    "accent-reader.onnx": {
+      "bytes": 5175032,
+      "sha256": "ff051fd67cfe719884a88bef554b98252ab7440498428d7869438a37e49cfa02",
+      "license": "CC-BY-4.0",
+      "inputs": [
+        {
+          "name": "frames",
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            "frames",
+            722
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "dtype": "FLOAT",
+          "shape": [
+            1,
+            "frames",
+            28
+          ]
+        }
+      ],
+      "opsets": {
+        "ai.onnx": 17
+      }
+    },
+    "language.onnx": {
+      "bytes": 1595719,
+      "sha256": "569ee45d51124c6ea0b7175d1343e6daa4cdc2ee5769432b7d794f5dede32372",
+      "license": "CC-BY-4.0",
+      "inputs": [
+        {
+          "name": "ids",
+          "dtype": "INT64",
+          "shape": [
+            "batch",
+            "tokens"
+          ]
+        }
+      ],
+      "outputs": [
+        {
+          "name": "logits",
+          "dtype": "FLOAT",
+          "shape": [
+            "batch",
+            "tokens",
+            30
+          ]
+        }
+      ],
+      "opsets": {
+        "ai.onnx": 17
+      }
+    }
+  },
+  "configuration": {
+    "lexicon.tsv": {
+      "bytes": 2798409,
+      "sha256": "2ac61fab34c65f1fb1bacf3609271d75155e35bd9555113a8d9a6d8fbb8f4feb"
+    },
+    "accent.tsv": {
+      "bytes": 5,
+      "sha256": "ba20b6a9484215981198572c96eef86587383a0520a18c773018720d4f0c88e7"
+    },
+    "decoder.tsv": {
+      "bytes": 15,
+      "sha256": "ff7512f75d7f59385ed193110bf0d34a01a63e3b4b0c8125a4c1a3226e45ae49"
+    }
+  },
+  "expected_text_at_inference": false
+}
