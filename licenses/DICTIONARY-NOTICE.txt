@@ -1,0 +1,8 @@
+Klingon dictionary data from De7vID/klingon-assistant-data (boQwI').
+Copyright (C) 2014 De'vID jonpIn (David Yonge-Mallo) and contributors.
+Apache License, Version 2.0; see Dictionary-Apache-2.0.txt.
+Source: https://github.com/De7vID/klingon-assistant-data
+Pinned revision: 0f6018ece74a3f5a4b61ddcd4c7a28b010bb7fd0
+Changes: Extract entry_name, part_of_speech and components from mem-01 through mem-26 XML files for offline speech recognition. Definitions and example sentences are excluded. No complete-sentence whitelist is used.
+The optional extra section was not fetched because the connector rejected its size; unknown-word decoding remains available.
+Klingon, Star Trek and related marks are trademarks of CBS Studios, Inc. No affiliation or endorsement is claimed.
