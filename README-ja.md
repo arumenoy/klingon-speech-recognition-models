@@ -8,6 +8,12 @@
 
 固定されたフレーズ一覧から答えを選ぶ方式ではなく、音声からクリンゴン語の文字列を推定します。推論時に正解文やヒントを与える必要はありません。LLMや音声合成モデルではなく、音声認識用の学習済みモデルです。
 
+## Androidで試す
+
+公開モデルの使用例として、無料のオフライン翻訳アプリ **ひとこと翻訳 クリンゴン語** に組み込んでいます。クリンゴン語を話すと、スマホの中で音声を認識して文字にします。
+
+[Google Playで「ひとこと翻訳 クリンゴン語」を試す](https://play.google.com/store/apps/details?id=jp.co.inazuma.hitokoto.alien&hl=ja&gl=JP)
+
 ## 入手方法
 
 **[Releases](https://github.com/arumenoy/klingon-speech-recognition-models/releases/latest)** から `klingon-asr-models-v1.0.0.zip` と `SHA256SUMS.txt` を取得してください。SHA-256を照合してから展開します。

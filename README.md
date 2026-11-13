@@ -8,6 +8,12 @@ Klingon is a small language community with an unusually interesting sound system
 
 The recognizer predicts a sequence of Klingon writing units. It does not select from a fixed list of permitted sentences, and inference does not take an expected transcript. It is a speech-recognition model bundle, not an LLM or a text-to-speech model.
 
+## Try it on Android
+
+These models power on-device Klingon speech recognition in **Hitokoto Translate Klingon**, a free offline Android translation app. You can speak Klingon into the app and see what it transcribes.
+
+[Try Hitokoto Translate Klingon on Google Play](https://play.google.com/store/apps/details?id=jp.co.inazuma.hitokoto.alien&hl=en)
+
 ## Download
 
 Open **[Releases](https://github.com/arumenoy/klingon-speech-recognition-models/releases/latest)** and download `klingon-asr-models-v1.0.0.zip`. Verify its SHA-256 against the accompanying `SHA256SUMS.txt` and extract the archive.
