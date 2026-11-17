@@ -14,6 +14,14 @@
 
 [Google Playで「ひとこと翻訳 クリンゴン語」を試す](https://play.google.com/store/apps/details?id=jp.co.inazuma.hitokoto.alien&hl=ja&gl=JP)
 
+## Windowsで試す・組み込む
+
+Windows x64版では、オフライン認識・自動言語判定・翻訳・読み上げまで動作する使用例を配布しています。[Windows組み込み資料](WINDOWS-ja.md)と[Python呼び出しサンプル](recognize_windows.py)に、WAV/JSON入出力、停止処理、日本語を含むパスへの対応、検証範囲をまとめました。サンプルはWindowsアプリ一式を利用します。公開ONNXファイル5個だけで動くWAV入力APIではありません。
+
+[Windows版の配布ページ](https://inazuma7.itch.io/hitokoto-translate-klingon)
+
+Windowsアプリは別のバイナリー配布です。アプリ本体の非公開ソースをこのリポジトリへ追加するものではありません。
+
 ## 入手方法
 
 **[Releases](https://github.com/arumenoy/klingon-speech-recognition-models/releases/latest)** から `klingon-asr-models-v1.0.0.zip` と `SHA256SUMS.txt` を取得してください。SHA-256を照合してから展開します。
@@ -43,3 +51,4 @@
 開発・公開：**米村貴裕（Takahiro Yonemura / arumenoy）**。活用例として、[ひとこと翻訳シリーズ](https://inazuma7.co.jp/hitokoto/index.html)の「ひとこと異星人語」があります。
 
 本プロジェクトは非公式の独立した取り組みです。Klingon、Star Trek等の名称・商標は各権利者に帰属します。権利者、クリンゴン語協会、元モデル・データの作者による公認や推薦を意味しません。
+

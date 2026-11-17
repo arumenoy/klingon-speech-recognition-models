@@ -4,7 +4,7 @@
 
 [日本語](README-ja.md) · [Download models](https://github.com/arumenoy/klingon-speech-recognition-models/releases/latest) · [Model card](MODEL_CARD.md) · [Input/output specification](INFERENCE.md) · [Licenses](LICENSE.md)
 
-Klingon is a small language community with an unusually interesting sound system. This release shares the recognition models developed for the **Hitokoto Alien Talk / ひとこと異星人語** Android translator, so other developers and enthusiasts can explore their own applications.
+Klingon is a small language community with an unusually interesting sound system. This release shares the recognition models developed for the **Hitokoto Translate Klingon / ひとこと翻訳 クリンゴン語** Android translator, so other developers and enthusiasts can explore their own applications.
 
 The recognizer predicts a sequence of Klingon writing units. It does not select from a fixed list of permitted sentences, and inference does not take an expected transcript. It is a speech-recognition model bundle, not an LLM or a text-to-speech model.
 
@@ -13,6 +13,14 @@ The recognizer predicts a sequence of Klingon writing units. It does not select 
 These models power on-device Klingon speech recognition in **Hitokoto Translate Klingon**, a free offline Android translation app. You can speak Klingon into the app and see what it transcribes.
 
 [Try Hitokoto Translate Klingon on Google Play](https://play.google.com/store/apps/details?id=jp.co.inazuma.hitokoto.alien&hl=en)
+
+## Windows reference application and integration
+
+A separate Windows x64 application demonstrates offline recognition, automatic language routing, translation and speech. See the [Windows integration guide](WINDOWS.md) and [Python caller sample](recognize_windows.py) for the WAV/JSON interface, process lifecycle, Unicode paths and validation limits. The caller requires the complete Windows app; the five ONNX files alone are not a WAV-to-text API.
+
+[Windows application download](https://inazuma7.itch.io/hitokoto-translate-klingon)
+
+The app is distributed separately as a binary. Its proprietary application source is not part of this repository.
 
 ## Download
 
@@ -49,3 +57,4 @@ The Klingon readers, character language model and release documentation are offe
 Developed and published by **Takahiro Yonemura / arumenoy**, for the Hitokoto project. An application of these models is introduced on the [Hitokoto Translate project page](https://inazuma7.co.jp/hitokoto/index.html).
 
 Independent, unofficial project. Klingon, Star Trek and related marks belong to their respective owners. No affiliation or endorsement by the franchise owners, the Klingon Language Institute, or the upstream model/data authors is claimed.
+
